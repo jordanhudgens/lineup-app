@@ -6,7 +6,7 @@ import CurrentUserContext from "../contexts/CurrentUserContext";
 export default class CurrentUserProvider extends React.Component {
   state = {
     loggedInStatus: "NOT_LOGGED_IN",
-    user: { role: "" },
+    user: {},
     isLoading: true,
     loginUser: (user: {}) => {
       console.log("user res", user);
