@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useContext } from "react";
 import { useInput } from "../../hooks/useInput";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import API from "../../helpers/api";
