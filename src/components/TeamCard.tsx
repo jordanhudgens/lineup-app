@@ -7,28 +7,83 @@ interface ITeamCardProps {
 
 const TeamCard = (props: ITeamCardProps) => {
   const batters = [
-    { id: "1", name: "SOGARD", position: "4", data: [".500", ".400"] },
-    { id: "2", name: "URENA", position: "6", data: [".571", ".235"] },
-    { id: "3", name: "GRICHUK", position: "9", data: [".250", ".197"] },
-    { id: "4", name: "SMOAK", position: "3", data: [".286", ".326"] },
-    { id: "5", name: "TELLEZ", position: "DH", data: [".125", ".261"] },
-    { id: "6", name: "DRURY", position: "5", data: [".182", ".204"] },
-    { id: "7", name: "MCKINNEY", position: "7", data: [".250", ".245"] },
-    { id: "8", name: "BRITO", position: "8", data: [".000", ".045"] },
-    { id: "9", name: "MAILE", position: "2", data: [".083", ".286"] }
+    {
+      id: "1",
+      name: "SOGARD",
+      position: "4",
+      data: [".500", ".400"],
+      hand: "RIGHT"
+    },
+    {
+      id: "2",
+      name: "URENA",
+      position: "6",
+      data: [".571", ".235"],
+      hand: "SWITCH"
+    },
+    {
+      id: "3",
+      name: "GRICHUK",
+      position: "9",
+      data: [".250", ".197"],
+      hand: "LEFT"
+    },
+    {
+      id: "4",
+      name: "SMOAK",
+      position: "3",
+      data: [".286", ".326"],
+      hand: "SWITCH"
+    },
+    {
+      id: "5",
+      name: "TELLEZ",
+      position: "DH",
+      data: [".125", ".261"],
+      hand: "LEFT"
+    },
+    {
+      id: "6",
+      name: "DRURY",
+      position: "5",
+      data: [".182", ".204"],
+      hand: "LEFT"
+    },
+    {
+      id: "7",
+      name: "MCKINNEY",
+      position: "7",
+      data: [".250", ".245"],
+      hand: "RIGHT"
+    },
+    {
+      id: "8",
+      name: "BRITO",
+      position: "8",
+      data: [".000", ".045"],
+      hand: "RIGHT"
+    },
+    {
+      id: "9",
+      name: "MAILE",
+      position: "2",
+      data: [".083", ".286"],
+      hand: "LEFT"
+    }
   ];
 
   const benchPlayers = [
-    { id: "10", name: "HERNANDEZ", data: [".350", ".182"] },
-    { id: "11", name: "HANSON", data: [".273", ".071"] },
-    { id: "12", name: "GALVIS", data: [".333", ".306"] },
-    { id: "13", name: "JANSEN", data: [".417", ".114"] }
+    { id: "10", name: "HERNANDEZ", data: [".350", ".182"], hand: "LEFT" },
+    { id: "11", name: "HANSON", data: [".273", ".071"], hand: "SWITCH" },
+    { id: "12", name: "GALVIS", data: [".333", ".306"], hand: "SWITCH" },
+    { id: "13", name: "JANSEN", data: [".417", ".114"], hand: "LEFT" }
   ];
 
   const startingPitcher = {
     id: "14",
     name: "THORNTON",
-    data: [".282", ".242"]
+    data: [".282", ".242"],
+    hand: "LEFT"
   };
 
   const batterList = () => {
