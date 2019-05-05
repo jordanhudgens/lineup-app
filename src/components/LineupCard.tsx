@@ -1,4 +1,5 @@
 import * as React from "react";
+import TeamCard from "./TeamCard";
 
 // LineupCard
 // score
@@ -12,7 +13,12 @@ import * as React from "react";
 //   - bullpen
 //     - pitcher
 const LineupCard = () => {
-  return <div>Lineuper</div>;
+  return (
+    <div>
+      <TeamCard name={"Toronto Blue Jays"} />
+      <TeamCard name={"San Francisco Giants"} />
+    </div>
+  );
 };
 
 export default LineupCard;
