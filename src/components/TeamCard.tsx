@@ -18,7 +18,7 @@ const TeamCard = (props: ITeamCardProps) => {
     { id: "9", name: "MAILE", position: "2", data: [".083", ".286"] }
   ];
 
-  const playerList = () => {
+  const batterList = () => {
     if (batters.length > 0) {
       return batters.map(batter => {
         return <PlayerCard key={batter.id} player={batter} />;
@@ -29,7 +29,7 @@ const TeamCard = (props: ITeamCardProps) => {
   return (
     <div>
       <div>{props.name}</div>
-      <div>{playerList()}</div>
+      <div>{batterList()}</div>
     </div>
   );
 };
