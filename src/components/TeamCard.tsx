@@ -18,6 +18,13 @@ const TeamCard = (props: ITeamCardProps) => {
     { id: "9", name: "MAILE", position: "2", data: [".083", ".286"] }
   ];
 
+  const benchPlayers = [
+    { id: "10", name: "HERNANDEZ", data: [".350", ".182"] },
+    { id: "11", name: "HANSON", data: [".273", ".071"] },
+    { id: "12", name: "GALVIS", data: [".333", ".306"] },
+    { id: "13", name: "JANSEN", data: [".417", ".114"] }
+  ];
+
   const batterList = () => {
     if (batters.length > 0) {
       return batters.map(batter => {
@@ -26,10 +33,24 @@ const TeamCard = (props: ITeamCardProps) => {
     }
   };
 
+  const benchList = () => {
+    if (benchPlayers.length > 0) {
+      return benchPlayers.map(benchPlayer => {
+        return <PlayerCard key={benchPlayer.id} player={benchPlayer} />;
+      });
+    }
+  };
+
   return (
     <div>
       <div>{props.name}</div>
+
+      <div>
+        <div>5/4/19</div>
+      </div>
+
       <div>{batterList()}</div>
+      <div>{benchList()}</div>
     </div>
   );
 };

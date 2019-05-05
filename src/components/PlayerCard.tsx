@@ -3,7 +3,7 @@ import * as React from "react";
 interface IPlayerCardProps {
   player: {
     name: string;
-    position: string;
+    position?: string;
     data: Array<string>;
   };
 }
