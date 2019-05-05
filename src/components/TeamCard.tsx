@@ -86,6 +86,17 @@ const TeamCard = (props: ITeamCardProps) => {
     hand: "LEFT"
   };
 
+  const bullpenPitchers = [
+    { id: "15", name: "SMITH", data: [".000", ".190"], hand: "RIGHT" },
+    { id: "16", name: "WATSON", data: [".333", ".235"], hand: "LEFT" },
+    { id: "17", name: "BERGEN", data: [".333", ".235"], hand: "LEFT" },
+    { id: "18", name: "MORONTA", data: [".333", ".235"], hand: "LEFT" },
+    { id: "19", name: "VINCENT", data: [".333", ".235"], hand: "LEFT" },
+    { id: "20", name: "GOTT", data: [".333", ".235"], hand: "LEFT" },
+    { id: "21", name: "MELANCON", data: [".333", ".235"], hand: "LEFT" },
+    { id: "22", name: "dyson", data: [".333", ".235"], hand: "LEFT" }
+  ];
+
   const batterList = () => {
     if (batters.length > 0) {
       return batters.map(batter => {
@@ -98,6 +109,14 @@ const TeamCard = (props: ITeamCardProps) => {
     if (benchPlayers.length > 0) {
       return benchPlayers.map(benchPlayer => {
         return <PlayerCard key={benchPlayer.id} player={benchPlayer} />;
+      });
+    }
+  };
+
+  const bullpentList = () => {
+    if (bullpenPitchers.length > 0) {
+      return bullpenPitchers.map(bullpenPitcher => {
+        return <PlayerCard key={bullpenPitcher.id} player={bullpenPitcher} />;
       });
     }
   };
@@ -117,6 +136,8 @@ const TeamCard = (props: ITeamCardProps) => {
       <div>
         <PlayerCard player={startingPitcher} />
       </div>
+
+      <div>{bullpentList()}</div>
     </div>
   );
 };
