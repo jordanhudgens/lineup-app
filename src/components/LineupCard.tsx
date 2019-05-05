@@ -7,9 +7,12 @@ import TeamCard from "./TeamCard";
 //   x date
 //   x location
 //   x 9 batters
-//   - Bench
+//     - uses the player card component
+//   x Bench
 //     - bench players
+//       - uses the player card component
 //   - current pitcher
+//     - uses the player card component
 //   - bullpen
 //     - pitcher
 const LineupCard = () => {

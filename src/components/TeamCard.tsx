@@ -25,6 +25,12 @@ const TeamCard = (props: ITeamCardProps) => {
     { id: "13", name: "JANSEN", data: [".417", ".114"] }
   ];
 
+  const startingPitcher = {
+    id: "14",
+    name: "THORNTON",
+    data: [".282", ".242"]
+  };
+
   const batterList = () => {
     if (batters.length > 0) {
       return batters.map(batter => {
@@ -50,7 +56,12 @@ const TeamCard = (props: ITeamCardProps) => {
       </div>
 
       <div>{batterList()}</div>
+
       <div>{benchList()}</div>
+
+      <div>
+        <PlayerCard player={startingPitcher} />
+      </div>
     </div>
   );
 };
