@@ -6,18 +6,23 @@ interface ITeamCardProps {
 }
 
 const TeamCard = (props: ITeamCardProps) => {
+  const players = [
+    { id: "1", name: "Jon Snow", number: "4", data: [".123", ".748"] },
+    { id: "2", name: "Jon Snow", number: "6", data: [".500", ".123"] }
+  ];
+
+  const playerList = () => {
+    if (players.length > 0) {
+      return players.map(player => {
+        return <PlayerCard key={player.id} player={player} />;
+      });
+    }
+  };
+
   return (
     <div>
       <div>{props.name}</div>
-      <PlayerCard name={"Jon Snow"} data={[".500", ".400"]} />
-      <PlayerCard name={"Jon Snow 2"} data={[".123", ".748"]} />
-      <PlayerCard name={"Jon Snow 3"} data={[".500", ".400"]} />
-      <PlayerCard name={"Jon Snow 4"} data={[".123", ".748"]} />
-      <PlayerCard name={"Jon Snow 5"} data={[".500", ".400"]} />
-      <PlayerCard name={"Jon Snow 6"} data={[".123", ".748"]} />
-      <PlayerCard name={"Jon Snow 7"} data={[".500", ".400"]} />
-      <PlayerCard name={"Jon Snow 8"} data={[".123", ".748"]} />
-      <PlayerCard name={"Jon Snow 9"} data={[".500", ".400"]} />
+      <div>{playerList()}</div>
     </div>
   );
 };
